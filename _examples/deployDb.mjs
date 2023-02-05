@@ -1,24 +1,11 @@
-# Rise DeployInfra
-
-## Install
-
-```
-npm i rise-deployinfra
-```
-
-## Usage
-
-### Deploy
-
-```js
-import { deployInfra } from 'rise-deployinfra'
+import { deployInfra } from '../index.mjs'
 
 const template = {
     Resources: {
         Database: {
             Type: 'AWS::DynamoDB::Table',
             Properties: {
-                TableName: 'mydeplyinfratestdb',
+                TableName: 'mydeployinfratestdb',
                 AttributeDefinitions: [
                     {
                         AttributeName: 'pk',
@@ -46,24 +33,14 @@ const template = {
     },
     Outputs: {}
 }
-
-const res = await deployInfra({
-    name: 'my-stack',
-    region: 'us-east-1',
-    stage: 'dev',
-    template: JSON.stringify(template),
-    outputs: ['URL']
-})
-```
-
-### Deploy
-
-```js
-import { removeInfra } from 'rise-deployinfra'
-
-const res = await removeInfra({
-    name: 'my-stack',
-    region: 'us-east-1',
-    stage: 'dev'
-})
-```
+async function main() {
+    const x = await deployInfra({
+        name: 'my-infradeploy-stack',
+        region: 'us-east-1',
+        stage: 'dev',
+        template: JSON.stringify(template),
+        outputs: ['URL']
+    })
+    console.log(x)
+}
+main()
