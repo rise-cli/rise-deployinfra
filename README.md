@@ -1,5 +1,12 @@
 # Rise DeployInfra
 
+## Project Status
+
+-   ✅ tests
+-   ✅ docs
+-   ✅ examples
+-   🔲 CICD
+
 ## Install
 
 ```
