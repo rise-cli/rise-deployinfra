@@ -1,11 +1,6 @@
 # Rise DeployInfra
 
-## Project Status
-
--   ✅ tests
--   ✅ docs
--   ✅ examples
--   🔲 CICD
+![GitHub CI status](https://github.com/rise-cli/rise-deployinfra/actions/workflows/test.yml/badge.svg)
 
 ## Install
 
