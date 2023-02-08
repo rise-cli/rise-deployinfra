@@ -46,7 +46,13 @@ const template = {
             }
         }
     },
-    Outputs: {}
+    Outputs: {
+        TABLEARN: {
+            Value: {
+                Ref: 'Database'
+            }
+        }
+    }
 }
 
 const res = await deployInfra({
@@ -54,7 +60,7 @@ const res = await deployInfra({
     region: 'us-east-1',
     stage: 'dev',
     template: JSON.stringify(template),
-    outputs: ['URL']
+    outputs: ['TABLEARN']
 })
 ```
 
