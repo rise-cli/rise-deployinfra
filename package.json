@@ -1,6 +1,6 @@
 {
     "name": "rise-deployinfra",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "",
     "main": "index.mjs",
     "scripts": {
@@ -11,7 +11,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "rise-aws-foundation": "^0.0.10",
+        "rise-aws-foundation": "^0.0.13",
         "rise-cli-foundation": "^0.0.14"
     }
 }

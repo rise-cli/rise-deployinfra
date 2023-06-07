@@ -2,8 +2,7 @@ import * as cli from 'rise-cli-foundation'
 import * as aws from 'rise-aws-foundation'
 import { formatCloudformationStatus } from './print.mjs'
 
-export const deployInfraAction =
-    (io) =>
+export const deployInfraAction = (io) =>
     async ({ name, region, stage, template, outputs }) => {
         try {
             /**
@@ -12,7 +11,7 @@ export const deployInfraAction =
             await io.aws.deployStack({
                 name: name + stage,
                 region,
-                template: template
+                template
             })
 
             /**
@@ -124,8 +123,7 @@ export async function deployInfra({ name, region, stage, template, outputs }) {
     })
 }
 
-export const removeInfraAction =
-    (io) =>
+export const removeInfraAction = (io) =>
     async ({ name, region, stage }) => {
         try {
             /**
